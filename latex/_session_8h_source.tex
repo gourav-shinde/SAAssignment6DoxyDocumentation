@@ -1,0 +1,43 @@
+\hypertarget{_session_8h_source}{}\doxysection{Session.\+h}
+\label{_session_8h_source}\index{Session/Session.h@{Session/Session.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ The\ following\ ifdef\ block\ is\ the\ standard\ way\ of\ creating\ macros\ which\ make\ exporting}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ from\ a\ DLL\ simpler.\ All\ files\ within\ this\ DLL\ are\ compiled\ with\ the\ SESSION\_EXPORTS}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ symbol\ defined\ on\ the\ command\ line.\ This\ symbol\ should\ not\ be\ defined\ on\ any\ project}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ that\ uses\ this\ DLL.\ This\ way\ any\ other\ project\ whose\ source\ files\ include\ this\ file\ see}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ SESSION\_API\ functions\ as\ being\ imported\ from\ a\ DLL,\ whereas\ this\ DLL\ sees\ symbols}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ defined\ with\ this\ macro\ as\ being\ exported.}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifdef\ SESSION\_EXPORTS}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ SESSION\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ SESSION\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}../WorkBookManager/WorkBookManager.h"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }SESSION\_API\ \mbox{\hyperlink{class_c_session}{CSession}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ std::string\ \mbox{\hyperlink{class_c_session_a29e8ceb18781cd3efb1b6360d3dc2203}{current\_session\_path}};\ }
+\DoxyCodeLine{00030\ \ \ \ \ std::map<std::string,\ CWorkBookManager>\ \mbox{\hyperlink{class_c_session_ae8389a52c08ac9835f25df367c629902}{list}};\ }
+\DoxyCodeLine{00034\ \ \ \ \ std::int16\_t\ \mbox{\hyperlink{class_c_session_ac611d83da454a137a9a641293c627818}{ID}};}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_c_session}{CSession}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00037\ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateSession();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \textcolor{keywordtype}{void}\ LoadSession(std::string\ path);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \textcolor{keywordtype}{void}\ Save();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \textcolor{keywordtype}{void}\ SaveAt(std::string\ path);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \mbox{\hyperlink{class_c_work_book_manager}{CWorkBookManager}}\ CreateWorkBook();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \mbox{\hyperlink{class_c_work_book_manager}{CWorkBookManager}}\ AddWorkBook(std::string\ path);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \textcolor{keywordtype}{void}\ RemoveWorkbook(std::string);}
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{extern}\ SESSION\_API\ \textcolor{keywordtype}{int}\ nSession;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ SESSION\_API\ \textcolor{keywordtype}{int}\ fnSession(\textcolor{keywordtype}{void});}
+
+\end{DoxyCode}

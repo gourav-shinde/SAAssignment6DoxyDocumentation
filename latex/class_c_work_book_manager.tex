@@ -1,0 +1,199 @@
+\hypertarget{class_c_work_book_manager}{}\doxysection{CWork\+Book\+Manager Class Reference}
+\label{class_c_work_book_manager}\index{CWorkBookManager@{CWorkBookManager}}
+
+
+This class manages the Work\+Book functions.  
+
+
+
+
+{\ttfamily \#include $<$Work\+Book\+Manager.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_work_book_manager_a1dfaaa8b6c119153693dac17ee505465}\label{class_c_work_book_manager_a1dfaaa8b6c119153693dac17ee505465}} 
+enum \mbox{\hyperlink{class_c_work_book_manager_a1dfaaa8b6c119153693dac17ee505465}{FILETYPE}} \{ {\bfseries csv}
+, {\bfseries xlxs}
+, {\bfseries xlsm}
+, {\bfseries txt}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines the types of file supported for saving workbook. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_work_book_manager_a276198148b06e8805317c26e084a9800}\label{class_c_work_book_manager_a276198148b06e8805317c26e084a9800}} 
+{\bfseries CWork\+Book\+Manager} (void)
+\begin{DoxyCompactList}\small\item\em This is the constructor of a class that has been exported. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_work_book_manager_a527b43e233677133db200b427dbe556c}{Open\+Work\+Book}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em This function is used to open workbook. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_work_book_manager_a846de9019c5c55e53a9a72287edee24d}{Save\+Work\+Book}} ()
+\begin{DoxyCompactList}\small\item\em Saves the changes in Workbook. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_work_book_manager_a0232610758967049e0c1196d8b53ec15}{Save\+As}} (std\+::string path, \mbox{\hyperlink{class_c_work_book_manager_a1dfaaa8b6c119153693dac17ee505465}{FILETYPE}} type)
+\begin{DoxyCompactList}\small\item\em Saves the workbook in desired format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_work_book_manager_ab0ef5ed451124506a26c97c80945413b}{Close}} ()
+\begin{DoxyCompactList}\small\item\em This function is used to close workbook. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_work_sheet_manager}{CWork\+Sheet\+Manager}} \mbox{\hyperlink{class_c_work_book_manager_a45fb023696f3443b17ea62700084667d}{add\+Work\+Sheet}} ()
+\begin{DoxyCompactList}\small\item\em Adds a Worksheet to Workbook. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_work_sheet_manager}{CWork\+Sheet\+Manager}} \mbox{\hyperlink{class_c_work_book_manager_a80a20f567676eeef14e0e580794796f3}{Make\+Work\+Sheet\+Active}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Fetches the worksheet from current set of worksheets. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_work_book_manager_a12b5232fbf556c22b448b55ae329f13d}{delete\+Work\+Sheet}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em deletes specified worksheet \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_c_work_book_manager_aad8c8a033f360781a8c5a9023b4045f8}{src}}
+\begin{DoxyCompactList}\small\item\em Holds path of workbook object. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{class_c_work_sheet_manager}{CWork\+Sheet\+Manager}} $>$ \mbox{\hyperlink{class_c_work_book_manager_ac6e28354ecb222cf3afc0eef47606929}{list}}
+\begin{DoxyCompactList}\small\item\em Holds and maintains all worksheet objects of current workbook. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class manages the Work\+Book functions. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_work_book_manager_a45fb023696f3443b17ea62700084667d}\label{class_c_work_book_manager_a45fb023696f3443b17ea62700084667d}} 
+\index{CWorkBookManager@{CWorkBookManager}!addWorkSheet@{addWorkSheet}}
+\index{addWorkSheet@{addWorkSheet}!CWorkBookManager@{CWorkBookManager}}
+\doxysubsubsection{\texorpdfstring{addWorkSheet()}{addWorkSheet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_work_sheet_manager}{CWork\+Sheet\+Manager}} CWork\+Book\+Manager\+::add\+Work\+Sheet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Adds a Worksheet to Workbook. 
+
+Adds a Worksheet to Workbook \begin{DoxyReturn}{Returns}
+Should not return
+\end{DoxyReturn}
+Calls Create\+Work\+Sheet() from Cwork\+Sheet\+Manager class.~\newline
+ creates a new worksheet \mbox{\Hypertarget{class_c_work_book_manager_ab0ef5ed451124506a26c97c80945413b}\label{class_c_work_book_manager_ab0ef5ed451124506a26c97c80945413b}} 
+\index{CWorkBookManager@{CWorkBookManager}!Close@{Close}}
+\index{Close@{Close}!CWorkBookManager@{CWorkBookManager}}
+\doxysubsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily void CWork\+Book\+Manager\+::\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to close workbook. 
+
+closes the workbook. \begin{DoxyReturn}{Returns}
+Should not return 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_work_book_manager_a12b5232fbf556c22b448b55ae329f13d}\label{class_c_work_book_manager_a12b5232fbf556c22b448b55ae329f13d}} 
+\index{CWorkBookManager@{CWorkBookManager}!deleteWorkSheet@{deleteWorkSheet}}
+\index{deleteWorkSheet@{deleteWorkSheet}!CWorkBookManager@{CWorkBookManager}}
+\doxysubsubsection{\texorpdfstring{deleteWorkSheet()}{deleteWorkSheet()}}
+{\footnotesize\ttfamily void CWork\+Book\+Manager\+::delete\+Work\+Sheet (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+deletes specified worksheet 
+
+deletes specified worksheet \begin{DoxyReturn}{Returns}
+returns Worksheet object if found, else null object.
+\end{DoxyReturn}
+Permanently deletes the workbook 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & key of workbook. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_work_book_manager_a80a20f567676eeef14e0e580794796f3}\label{class_c_work_book_manager_a80a20f567676eeef14e0e580794796f3}} 
+\index{CWorkBookManager@{CWorkBookManager}!MakeWorkSheetActive@{MakeWorkSheetActive}}
+\index{MakeWorkSheetActive@{MakeWorkSheetActive}!CWorkBookManager@{CWorkBookManager}}
+\doxysubsubsection{\texorpdfstring{MakeWorkSheetActive()}{MakeWorkSheetActive()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_work_sheet_manager}{CWork\+Sheet\+Manager}} CWork\+Book\+Manager\+::\+Make\+Work\+Sheet\+Active (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Fetches the worksheet from current set of worksheets. 
+
+Fetches the worksheet from current set of worksheets \begin{DoxyReturn}{Returns}
+returns Worksheet object if fould, else null object.
+\end{DoxyReturn}
+Selects the worksheet from map of current workbook 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & key of worksheet. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_work_book_manager_a527b43e233677133db200b427dbe556c}\label{class_c_work_book_manager_a527b43e233677133db200b427dbe556c}} 
+\index{CWorkBookManager@{CWorkBookManager}!OpenWorkBook@{OpenWorkBook}}
+\index{OpenWorkBook@{OpenWorkBook}!CWorkBookManager@{CWorkBookManager}}
+\doxysubsubsection{\texorpdfstring{OpenWorkBook()}{OpenWorkBook()}}
+{\footnotesize\ttfamily void CWork\+Book\+Manager\+::\+Open\+Work\+Book (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+This function is used to open workbook. 
+
+opens workbook. \begin{DoxyReturn}{Returns}
+returns -\/1 if workbook not found, else return workbook.
+\end{DoxyReturn}
+Returns -\/1 if existing file not found at specified path, else returns file 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em path} & Path of exisiting workbook. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_work_book_manager_a0232610758967049e0c1196d8b53ec15}\label{class_c_work_book_manager_a0232610758967049e0c1196d8b53ec15}} 
+\index{CWorkBookManager@{CWorkBookManager}!SaveAs@{SaveAs}}
+\index{SaveAs@{SaveAs}!CWorkBookManager@{CWorkBookManager}}
+\doxysubsubsection{\texorpdfstring{SaveAs()}{SaveAs()}}
+{\footnotesize\ttfamily void CWork\+Book\+Manager\+::\+Save\+As (\begin{DoxyParamCaption}\item[{std\+::string}]{path,  }\item[{\mbox{\hyperlink{class_c_work_book_manager_a1dfaaa8b6c119153693dac17ee505465}{FILETYPE}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Saves the workbook in desired format. 
+
+This function is used to Save the workbook in desired format.
+
+\begin{DoxyRemark}{Remarks}
+csv,xlxs,xlsm,txt are supported types 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path of exsisiting workbook. \\
+\hline
+{\em type} & FILETYPE ENUM object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Should not return 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_work_book_manager_a846de9019c5c55e53a9a72287edee24d}\label{class_c_work_book_manager_a846de9019c5c55e53a9a72287edee24d}} 
+\index{CWorkBookManager@{CWorkBookManager}!SaveWorkBook@{SaveWorkBook}}
+\index{SaveWorkBook@{SaveWorkBook}!CWorkBookManager@{CWorkBookManager}}
+\doxysubsubsection{\texorpdfstring{SaveWorkBook()}{SaveWorkBook()}}
+{\footnotesize\ttfamily void CWork\+Book\+Manager\+::\+Save\+Work\+Book (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Saves the changes in Workbook. 
+
+This function is used to Save the changes in Workbook. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_c_work_book_manager_ac6e28354ecb222cf3afc0eef47606929}\label{class_c_work_book_manager_ac6e28354ecb222cf3afc0eef47606929}} 
+\index{CWorkBookManager@{CWorkBookManager}!list@{list}}
+\index{list@{list}!CWorkBookManager@{CWorkBookManager}}
+\doxysubsubsection{\texorpdfstring{list}{list}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{class_c_work_sheet_manager}{CWork\+Sheet\+Manager}}$>$ CWork\+Book\+Manager\+::list}
+
+
+
+Holds and maintains all worksheet objects of current workbook. 
+
+maintains map of Worksheets in workbook \mbox{\Hypertarget{class_c_work_book_manager_aad8c8a033f360781a8c5a9023b4045f8}\label{class_c_work_book_manager_aad8c8a033f360781a8c5a9023b4045f8}} 
+\index{CWorkBookManager@{CWorkBookManager}!src@{src}}
+\index{src@{src}!CWorkBookManager@{CWorkBookManager}}
+\doxysubsubsection{\texorpdfstring{src}{src}}
+{\footnotesize\ttfamily std\+::string CWork\+Book\+Manager\+::src}
+
+
+
+Holds path of workbook object. 
+
+Holds path of this workbook 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Work\+Book\+Manager/Work\+Book\+Manager.\+h\item 
+Work\+Book\+Manager/Work\+Book\+Manager.\+cpp\end{DoxyCompactItemize}

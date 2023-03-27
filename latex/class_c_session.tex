@@ -1,0 +1,161 @@
+\hypertarget{class_c_session}{}\doxysection{CSession Class Reference}
+\label{class_c_session}\index{CSession@{CSession}}
+
+
+This class manages Session functions and workbooks.  
+
+
+
+
+{\ttfamily \#include $<$Session.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_session_a558028acb042660410b827a20ce3a083}\label{class_c_session_a558028acb042660410b827a20ce3a083}} 
+{\bfseries CSession} (void)
+\begin{DoxyCompactList}\small\item\em This is the constructor of a class that has been exported. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_session_a5255346b78d174366fbaf8a2a8c2491d}{Create\+Session}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new session. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_session_a33aff4e3f84aa20e5feaa4e8d465977b}{Load\+Session}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Loads Session configurations and Workbooks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_session_a8350d9d16016ceebe9a67a7f4624b5a4}{Save}} ()
+\begin{DoxyCompactList}\small\item\em Saves the Session. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_session_a4328b3b2d7b1a821d4e3ad9ff979e90a}{Save\+At}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Saves Session at specified path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_work_book_manager}{CWork\+Book\+Manager}} \mbox{\hyperlink{class_c_session_a34f89347be1e485cbcc0ea5cf6729c2e}{Create\+Work\+Book}} ()
+\begin{DoxyCompactList}\small\item\em Creates New workbook and adds into the session. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_work_book_manager}{CWork\+Book\+Manager}} \mbox{\hyperlink{class_c_session_ada142ed70a201f1d5f86091ec311f97a}{Add\+Work\+Book}} (std\+::string path)
+\item 
+void \mbox{\hyperlink{class_c_session_a58bc0de52b3f980088ea5b423cef3a1d}{Remove\+Workbook}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Removes workbook from the session. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_c_session_a29e8ceb18781cd3efb1b6360d3dc2203}{current\+\_\+session\+\_\+path}}
+\begin{DoxyCompactList}\small\item\em Stores path of current session. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{class_c_work_book_manager}{CWork\+Book\+Manager}} $>$ \mbox{\hyperlink{class_c_session_ae8389a52c08ac9835f25df367c629902}{list}}
+\begin{DoxyCompactList}\small\item\em Stores objects of all workbooks in session. \end{DoxyCompactList}\item 
+std\+::int16\+\_\+t \mbox{\hyperlink{class_c_session_ac611d83da454a137a9a641293c627818}{ID}}
+\begin{DoxyCompactList}\small\item\em ID of session object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class manages Session functions and workbooks. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_session_ada142ed70a201f1d5f86091ec311f97a}\label{class_c_session_ada142ed70a201f1d5f86091ec311f97a}} 
+\index{CSession@{CSession}!AddWorkBook@{AddWorkBook}}
+\index{AddWorkBook@{AddWorkBook}!CSession@{CSession}}
+\doxysubsubsection{\texorpdfstring{AddWorkBook()}{AddWorkBook()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_work_book_manager}{CWork\+Book\+Manager}} CSession\+::\+Add\+Work\+Book (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+Adds existing workbook to the session \begin{DoxyReturn}{Returns}
+returns null object if workbook not found, else returns workbook object.
+\end{DoxyReturn}
+Returns -\/1 if file not found at specified path, else returns file \mbox{\Hypertarget{class_c_session_a5255346b78d174366fbaf8a2a8c2491d}\label{class_c_session_a5255346b78d174366fbaf8a2a8c2491d}} 
+\index{CSession@{CSession}!CreateSession@{CreateSession}}
+\index{CreateSession@{CreateSession}!CSession@{CSession}}
+\doxysubsubsection{\texorpdfstring{CreateSession()}{CreateSession()}}
+{\footnotesize\ttfamily void CSession\+::\+Create\+Session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new session. 
+
+creates a new session \mbox{\Hypertarget{class_c_session_a34f89347be1e485cbcc0ea5cf6729c2e}\label{class_c_session_a34f89347be1e485cbcc0ea5cf6729c2e}} 
+\index{CSession@{CSession}!CreateWorkBook@{CreateWorkBook}}
+\index{CreateWorkBook@{CreateWorkBook}!CSession@{CSession}}
+\doxysubsubsection{\texorpdfstring{CreateWorkBook()}{CreateWorkBook()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_work_book_manager}{CWork\+Book\+Manager}} CSession\+::\+Create\+Work\+Book (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates New workbook and adds into the session. 
+
+Creates New workbook and adds into the session \begin{DoxyReturn}{Returns}
+returns null object if exception occured, else returns workbook object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_session_a33aff4e3f84aa20e5feaa4e8d465977b}\label{class_c_session_a33aff4e3f84aa20e5feaa4e8d465977b}} 
+\index{CSession@{CSession}!LoadSession@{LoadSession}}
+\index{LoadSession@{LoadSession}!CSession@{CSession}}
+\doxysubsubsection{\texorpdfstring{LoadSession()}{LoadSession()}}
+{\footnotesize\ttfamily void CSession\+::\+Load\+Session (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Loads Session configurations and Workbooks. 
+
+Load Session configurations and Workbooks.
+
+Returns -\/1 if session file not found at specified path \mbox{\Hypertarget{class_c_session_a58bc0de52b3f980088ea5b423cef3a1d}\label{class_c_session_a58bc0de52b3f980088ea5b423cef3a1d}} 
+\index{CSession@{CSession}!RemoveWorkbook@{RemoveWorkbook}}
+\index{RemoveWorkbook@{RemoveWorkbook}!CSession@{CSession}}
+\doxysubsubsection{\texorpdfstring{RemoveWorkbook()}{RemoveWorkbook()}}
+{\footnotesize\ttfamily void CSession\+::\+Remove\+Workbook (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Removes workbook from the session. 
+
+removes workbook from the session
+
+This does not delete the workbook. \mbox{\Hypertarget{class_c_session_a8350d9d16016ceebe9a67a7f4624b5a4}\label{class_c_session_a8350d9d16016ceebe9a67a7f4624b5a4}} 
+\index{CSession@{CSession}!Save@{Save}}
+\index{Save@{Save}!CSession@{CSession}}
+\doxysubsubsection{\texorpdfstring{Save()}{Save()}}
+{\footnotesize\ttfamily void CSession\+::\+Save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Saves the Session. 
+
+Save the Session. \mbox{\Hypertarget{class_c_session_a4328b3b2d7b1a821d4e3ad9ff979e90a}\label{class_c_session_a4328b3b2d7b1a821d4e3ad9ff979e90a}} 
+\index{CSession@{CSession}!SaveAt@{SaveAt}}
+\index{SaveAt@{SaveAt}!CSession@{CSession}}
+\doxysubsubsection{\texorpdfstring{SaveAt()}{SaveAt()}}
+{\footnotesize\ttfamily void CSession\+::\+Save\+At (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Saves Session at specified path. 
+
+Save Session at specified path. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_c_session_a29e8ceb18781cd3efb1b6360d3dc2203}\label{class_c_session_a29e8ceb18781cd3efb1b6360d3dc2203}} 
+\index{CSession@{CSession}!current\_session\_path@{current\_session\_path}}
+\index{current\_session\_path@{current\_session\_path}!CSession@{CSession}}
+\doxysubsubsection{\texorpdfstring{current\_session\_path}{current\_session\_path}}
+{\footnotesize\ttfamily std\+::string CSession\+::current\+\_\+session\+\_\+path}
+
+
+
+Stores path of current session. 
+
+Holds the path to current object \mbox{\Hypertarget{class_c_session_ac611d83da454a137a9a641293c627818}\label{class_c_session_ac611d83da454a137a9a641293c627818}} 
+\index{CSession@{CSession}!ID@{ID}}
+\index{ID@{ID}!CSession@{CSession}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily std\+::int16\+\_\+t CSession\+::\+ID}
+
+
+
+ID of session object. 
+
+Holds session ID \mbox{\Hypertarget{class_c_session_ae8389a52c08ac9835f25df367c629902}\label{class_c_session_ae8389a52c08ac9835f25df367c629902}} 
+\index{CSession@{CSession}!list@{list}}
+\index{list@{list}!CSession@{CSession}}
+\doxysubsubsection{\texorpdfstring{list}{list}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{class_c_work_book_manager}{CWork\+Book\+Manager}}$>$ CSession\+::list}
+
+
+
+Stores objects of all workbooks in session. 
+
+Holds all the workbooks in the session 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Session/Session.\+h\item 
+Session/Session.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,50 @@
+\hypertarget{_work_book_manager_8h_source}{}\doxysection{Work\+Book\+Manager.\+h}
+\label{_work_book_manager_8h_source}\index{WorkBookManager/WorkBookManager.h@{WorkBookManager/WorkBookManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ The\ following\ ifdef\ block\ is\ the\ standard\ way\ of\ creating\ macros\ which\ make\ exporting}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ from\ a\ DLL\ simpler.\ All\ files\ within\ this\ DLL\ are\ compiled\ with\ the\ WORKBOOKMANAGER\_EXPORTS}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ symbol\ defined\ on\ the\ command\ line.\ This\ symbol\ should\ not\ be\ defined\ on\ any\ project}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ that\ uses\ this\ DLL.\ This\ way\ any\ other\ project\ whose\ source\ files\ include\ this\ file\ see}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ WORKBOOKMANAGER\_API\ functions\ as\ being\ imported\ from\ a\ DLL,\ whereas\ this\ DLL\ sees\ symbols}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ defined\ with\ this\ macro\ as\ being\ exported.}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifdef\ WORKBOOKMANAGER\_EXPORTS}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ WORKBOOKMANAGER\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ WORKBOOKMANAGER\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include<string>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include<map>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}../WorkSheetManager/WorkSheetManager.h"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }WORKBOOKMANAGER\_API\ \mbox{\hyperlink{class_c_work_book_manager}{CWorkBookManager}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ \mbox{\hyperlink{class_c_work_book_manager_aad8c8a033f360781a8c5a9023b4045f8}{src}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ std::map<std::string,\ CWorkSheetManager>\ \mbox{\hyperlink{class_c_work_book_manager_ac6e28354ecb222cf3afc0eef47606929}{list}};\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_c_work_book_manager_a1dfaaa8b6c119153693dac17ee505465}{FILETYPE}}}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ csv,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ xlxs,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ xlsm,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ txt}
+\DoxyCodeLine{00033\ \ \ \ \ \};}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_c_work_book_manager}{CWorkBookManager}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ OpenWorkBook(std::string\ path\ );}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ SaveWorkBook();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ SaveAs(std::string\ path\ ,FILETYPE\ type);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ Close();}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_c_work_sheet_manager}{CWorkSheetManager}}\ addWorkSheet();}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_c_work_sheet_manager}{CWorkSheetManager}}\ MakeWorkSheetActive(std::string\ name\ );}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ deleteWorkSheet(std::string\ name\ );}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{extern}\ WORKBOOKMANAGER\_API\ \textcolor{keywordtype}{int}\ nWorkBookManager;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ WORKBOOKMANAGER\_API\ \textcolor{keywordtype}{int}\ fnWorkBookManager(\textcolor{keywordtype}{void});}
+
+\end{DoxyCode}
